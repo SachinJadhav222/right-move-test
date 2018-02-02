@@ -1,5 +1,5 @@
 *.DS_Store
-rm_test_framework.iml
+rightmove-test.iml
 target/
 .idea/
 

@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.rm.app</groupId>
+    <groupId>com.rmtest</groupId>
     <artifactId>rightmove-test</artifactId>
     <version>1.0-SNAPSHOT</version>
     <build>
@@ -17,7 +17,7 @@
                     <useIncrementalCompilation>true</useIncrementalCompilation>
                 </configuration>
             </plugin>
-            <!--===================================== PLUG IN =========================================================-->
+
             <!-- Maven-surefire-plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -36,22 +36,15 @@
                 </configuration>
             </plugin>
         </plugins>
-        <!--======================================================================================================-->
     </build>
     <packaging>jar</packaging>
 
-    <name>test_framework</name>
+    <name>rightmove-test</name>
     <url>http://maven.apache.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <junit.version>4.12</junit.version>
-        <appium.version>3.2.0</appium.version>
-        <seleniumJava.version>2.48.2</seleniumJava.version>
-        <cucumber.version>LATEST</cucumber.version>
-
     </properties>
-    <!--=========================================== DEPENDENCIES ===========================================================================-->
     <dependencies>
         <!-- Extent Report -->
         <dependency>
@@ -65,62 +58,46 @@
             <artifactId>extentreports</artifactId>
             <version>3.0.6</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server-standalone -->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-server-standalone</artifactId>
-            <version>2.46.0</version>
-        </dependency>
-
-        <!-- Selenium Server -->
+        <!-- selenium-server-standalone -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-server</artifactId>
-            <version>${seleniumJava.version}</version>
-            <!--<version>3.5.2</version>-->
-            <!--<version>2.48.2</version>-->
+            <version>3.6.0</version>
         </dependency>
 
         <!-- Selenium Java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>${seleniumJava.version}</version>
-            <!--<version>3.5.2</version>-->
-            <!--<version>2.48.2</version>-->
+            <version>3.6.0</version>
         </dependency>
 
         <!-- Cucumber Pico container -->
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-picocontainer</artifactId>
-            <!--<version>1.2.5</version>-->
-            <version>LATEST</version>
+            <version>1.2.4</version>
         </dependency>
 
         <!-- Cucumber Java -->
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-java</artifactId>
-            <!--<version>1.2.5</version>-->
-            <version>LATEST</version>
+            <version>1.2.4</version>
         </dependency>
 
-        <!-- Cucumber Juint-->
+        <!-- cucumber-core -->
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>1.2.4</version>
+        </dependency>
+
+        <!-- Cucumber JUint-->
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-junit</artifactId>
-            <!--<version>1.2.5</version>-->
-            <version>LATEST</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- Gherkin -->
-        <dependency>
-            <groupId>info.cukes</groupId>
-            <artifactId>gherkin</artifactId>
-            <version>2.12.2</version>
-            <scope>provided</scope>
+            <version>1.2.4</version>
         </dependency>
 
         <!-- JUnit -->
@@ -138,7 +115,14 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Log 4j Logging -->
+        <!-- Gherkin -->
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>gherkin</artifactId>
+            <version>2.12.2</version>
+            <scope>provided</scope>
+        </dependency>
+       <!-- Log 4j Logging -->
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
@@ -146,5 +130,4 @@
         </dependency>
 
     </dependencies>
-    <!--=================================================================================================================-->
 </project>
