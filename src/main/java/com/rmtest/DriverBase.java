@@ -11,6 +11,10 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Driver Base (Extended to all the page and utility class)
+ * @author SJadhav
+ */
 public class DriverBase {
     public static WebDriver driver;
 
@@ -20,6 +24,10 @@ public class DriverBase {
 
     Logger logger = Logger.getLogger("DriverBase");
 
+    /**
+     * Open the browser
+     * @throws IOException
+     */
     public void openBrowser() throws IOException
     {
         Properties properties = new Properties();
@@ -47,6 +55,9 @@ public class DriverBase {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
+    /**
+     * Close the Browser
+     */
     public void closeBrowser()
     {
         driver.quit();

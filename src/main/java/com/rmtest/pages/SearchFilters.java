@@ -6,6 +6,10 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+/**
+ * Search Filters
+ * @author SJadhav
+ */
 public class SearchFilters extends DriverBase {
     WebUtility webUtility;
     public SearchFilters(WebUtility webUtility)
@@ -39,7 +43,10 @@ public class SearchFilters extends DriverBase {
     @FindBy(css="div#lettingsearchcriteria")
     private WebElement letting_filter_page;
 
-
+    /**
+     * Verify Sales filter is deisplayed
+     * @return
+     */
 
     public  boolean verify_sale_filters_displayed(){
         boolean is_sales_filters_displayed=false;
@@ -49,6 +56,11 @@ public class SearchFilters extends DriverBase {
         }
         return is_sales_filters_displayed;
     }
+
+    /**
+     * Verify letting filter is displayed
+     * @return
+     */
     public  boolean verify_letting_filters_displayed(){
         boolean is_letting_filters_displayed=false;
         if(letting_filter_page.isDisplayed()){
@@ -102,7 +114,7 @@ public class SearchFilters extends DriverBase {
     }
 
     /**
-     * Selcttype of property
+     * Select type of property
      *
      * @param property_type
      */

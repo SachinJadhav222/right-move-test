@@ -11,6 +11,10 @@ import org.openqa.selenium.WebDriver;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Cucumber Hooks, contains @Before and @After methods gets executed before and after each cucumber scenario
+ * @author SJadhav
+ */
 
 public class Hooks {
     WebDriver driver;

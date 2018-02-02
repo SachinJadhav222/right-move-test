@@ -13,8 +13,7 @@ import java.io.IOException;
 
 /**
  * This is Test Runner using Selenium Class with Extent Report Configuration
- *
- * @author sjadhav
+ * @author SJadhav
  */
 @RunWith(Cucumber.class)
 @CucumberOptions(

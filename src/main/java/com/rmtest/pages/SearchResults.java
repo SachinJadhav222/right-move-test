@@ -9,6 +9,10 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
+/**
+ * Search Results
+ * @author SJadhav
+ */
 public class SearchResults extends DriverBase {
 
   WebUtility webUtility;
@@ -67,6 +71,9 @@ public class SearchResults extends DriverBase {
         logger.info("Sort Order Selected : " + sort_order);
     }
 
+    /**
+     * Click on Frist NON feature property
+     */
     public void click_on_non_featured_property()
     {
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
@@ -77,7 +84,10 @@ public class SearchResults extends DriverBase {
         logger.info("Clicked on First NON Featured property");
     }
 
-
+    /**
+     * Verify if the list of properties displayed
+     * @return
+     */
     public boolean list_of_properties_visible_on_page()
     {
         boolean is_properties_displayed= false;
@@ -97,6 +107,10 @@ public class SearchResults extends DriverBase {
         return is_properties_displayed;
     }
 
+    /**
+     * Verify property detaisl are displayed after clicking the property in the search list
+     * @return
+     */
     public boolean verify_property_dsplayed(){
         boolean is_property_displayed=false;
         logger.info(property_details);
